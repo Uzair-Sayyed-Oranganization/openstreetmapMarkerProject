@@ -25,11 +25,23 @@ function App() {
       const dx = (endCoordinates[0] - startCoordinates[0]) / 100;
       const dy = (endCoordinates[1] - startCoordinates[1]) / 100;
 
+      const distancePerPause = 10;
+
+      const pauseDuration = 300;
+
       for (let i = 0; i <= 80; i++) {
         frames.push([
           startCoordinates[0] + dx * i,
           startCoordinates[1] + dy * i,
         ]);
+
+        // Pause the animation at regular intervals
+        if (i % distancePerPause === 0) {
+          // Add the same coordinate multiple times to create a pause effect
+          for (let j = 0; j < pauseDuration / 80; j++) {
+            frames.push(frames[frames.length - 1]);
+          }
+        }
       }
 
       let index = 0;
@@ -40,7 +52,7 @@ function App() {
           index = 0;
           setTimeout(animate, 2000);
         } else {
-          setTimeout(animate, 80);
+          setTimeout(animate, 40);
         }
       };
 

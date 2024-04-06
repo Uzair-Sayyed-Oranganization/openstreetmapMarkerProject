@@ -53,3 +53,7 @@
 .long-value {
   font-weight: 400;
 }
+
+.leaflet-marker-pane img:nth-child(3) {
+  z-index: 99;
+}
