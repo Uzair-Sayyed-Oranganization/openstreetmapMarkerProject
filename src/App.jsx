@@ -7,7 +7,6 @@ import { Icon } from "leaflet";
 import StartIcon from "./assets/start.png";
 import EndIcon from "./assets/end.png";
 import FrameIcon from "./assets/Frame.png";
-import { L } from "leaflet";
 
 function App() {
   const coordinates = {
@@ -23,8 +22,8 @@ function App() {
   useEffect(() => {
     const moveFrameIcon = () => {
       const frames = [];
-      const dx = (endCoordinates[0] - startCoordinates[0]) / 100; // Calculate the change in latitude per step
-      const dy = (endCoordinates[1] - startCoordinates[1]) / 100; // Calculate the change in longitude per step
+      const dx = (endCoordinates[0] - startCoordinates[0]) / 100;
+      const dy = (endCoordinates[1] - startCoordinates[1]) / 100;
 
       for (let i = 0; i <= 80; i++) {
         frames.push([
@@ -39,13 +38,13 @@ function App() {
         index++;
         if (index === frames.length) {
           index = 0;
-          setTimeout(animate, 2000); // Pause for 2 seconds after completion
+          setTimeout(animate, 2000);
         } else {
-          setTimeout(animate, 80); // Adjust speed by changing interval time
+          setTimeout(animate, 80);
         }
       };
 
-      animate(); // Start animation
+      animate();
     };
 
     moveFrameIcon();

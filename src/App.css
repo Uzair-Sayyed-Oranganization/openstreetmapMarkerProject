@@ -53,18 +53,3 @@
 .long-value {
   font-weight: 400;
 }
-
-/* .leaflet-marker-pane img:nth-child(3) {
-  display: none;
-  transform: rotate(45deg) !important;
-  height: 60px;
-  width: 15px;
-
-} */
-.rotated-icon {
-  display: none;
-  width: 14px; /* Adjust width as needed */
-  height: 68px; /* Adjust height as needed */
-  transform-origin: center center; /* Set the rotation origin to the center of the image */
-  transform: rotate(45deg); /* Rotate the image by 45 degrees */
-}
