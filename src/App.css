@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.leaflet-container {
+  margin: 0 auto;
+  height: 600px;
+  width: 900px;
+}
+
+.map-info-container {
+  margin: 50px auto 50px auto;
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  border-radius: 15px;
+  padding: 10px 18px;
+  display: flex;
+  max-width: 500px;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-left,
+.info-right {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.info-title {
+  margin-bottom: 10px;
+}
+
+.speed {
+  font-size: 14px;
+}
+.speed p {
+  color: rgba(0, 0, 255, 0.788);
+}
+.speed-title {
+  font-weight: 700;
+}
+
+.lat-value,
+.long-value {
+  font-weight: 400;
+}
+
+/* .leaflet-marker-pane img:nth-child(3) {
+  display: none;
+  transform: rotate(45deg) !important;
+  height: 60px;
+  width: 15px;
+
+} */
+.rotated-icon {
+  display: none;
+  width: 14px; /* Adjust width as needed */
+  height: 68px; /* Adjust height as needed */
+  transform-origin: center center; /* Set the rotation origin to the center of the image */
+  transform: rotate(45deg); /* Rotate the image by 45 degrees */
+}
