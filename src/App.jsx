@@ -35,9 +35,7 @@ function App() {
           startCoordinates[1] + dy * i,
         ]);
 
-        // Pause the animation at regular intervals
         if (i % distancePerPause === 0) {
-          // Add the same coordinate multiple times to create a pause effect
           for (let j = 0; j < pauseDuration / 80; j++) {
             frames.push(frames[frames.length - 1]);
           }
